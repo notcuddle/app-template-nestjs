@@ -1,0 +1,13 @@
+services:
+  nestjs-app:
+    image: appnestjs:v1.1
+    ports:
+      - "3000:3000"
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+volumes:
+  mongodb_data:
